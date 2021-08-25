@@ -1,0 +1,296 @@
+.w3-bar-item {
+  padding:4px 8px!important;
+}
+#allclustlist {
+  overflow: auto;
+  height: 90%;
+  float: left;
+}
+#allmsslist {
+  overflow: auto;
+  height: 90%;
+  width: 45%;
+  float: left;
+}
+#buttondiv {
+  width: 25%;
+  float: left;
+}
+#controls {
+  width: 99%;
+  height: 7%;
+  display: block;
+  border:black solid 1px
+}
+#cyto {
+  width: 100%;
+  height: 90%;
+  display: block;
+}
+#filter {
+  overflow: auto;
+  height: 100%;
+}
+#glosses{
+  overflow: auto;
+  height: 99%;
+  top: 10%;
+}
+.lefttab {
+  margin-left: 12%;
+}
+#left {
+  width: 48%;
+  float: left;
+  height: 100%;
+  overflow: auto
+}
+#lowbound {
+  width: 10%;
+  float: left;
+  overflow: visible; 
+  color: #04AA6D;
+}
+#leftmenu {
+  width: 6%;
+}
+#manuscripts{
+  overflow: auto;
+  height: 99%;
+  top: 10%;
+}
+#networkx{
+  overflow: auto;
+  height: 99%;
+  top: 10%;
+}
+#otherfilters {
+  overflow: auto;
+  height: 90%;
+  width: 55%;
+  float: left;
+}
+#range {
+  width: 75%;
+  float: left;
+}
+#rangediv {
+  width: 100%;
+  float: left;
+  font-size:smaller;
+}
+#right {
+  width: 52%;
+  left: 48%;
+  float: left;
+  border: black solid 1px;
+  height: 100%;
+  position: fixed;
+}
+#uppbound {
+  width: 10%;
+  float: left;
+  overflow: visible; 
+  color: #04AA6D;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+div.lemma {
+  color: brown;
+}
+div.gloss {
+  left: 15px;
+}
+div.lemmadiv {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  color: black;
+}
+div.simgroup {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+}
+div.simgroupbody {
+  float: left;
+  width: 80%;
+}
+div.simgrouphead {
+  float: left;
+  width: 20%;
+}
+td.glossmslink {
+  padding:0px;
+  width: 23%;
+}
+td.glosstext {
+  padding:0px;
+  width: 49%;
+}
+td.glossnote {
+  width: 25%;
+  padding:0px;
+}
+table.lemmatable{
+    margin:0px;
+}
+
+td.lemmaid {
+  width: 39%;
+  padding:0px;
+}
+td.lemmatext {
+  width: 60%;
+  padding:0px;
+}
+
+img.stylus{
+    vertical-align:super;
+}
+
+p.msident {
+  font-weight: bold
+}
+p.warning {
+  color: green;
+}
+p.subhead {
+  font-style: italic
+}
+span.center{
+  text-align: center;
+}
+span.circledletter {
+    /*font-size:larger;*/
+    /*display: inline-block;*/
+}
+span.circledlettersuper {
+  vertical-align:super;
+  font-size: smaller;
+  font-style: normal;
+}
+span.corr {
+  /*color: grey*/
+}
+span.hyperlink {
+  text-decoration: underline;
+  cursor:pointer;
+}
+span.del {
+  text-decoration: line-through;
+}
+span.invisible {
+  color:white;
+}
+span.lemma {
+  color: brown;
+}
+span.app span.quote span.lg{
+  display:inline;
+}
+span.quote span.lg{
+  display:block;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+span.mentioned {
+  font-style: italic
+}
+span.quote {
+  font-style: italic
+}
+span.suplink {
+  vertical-align:super;
+  font-size: small;  
+}
+span.drypoint {
+  font-family: "Times new roman";
+  font-size: larger;
+}
+span.tironiannotes {
+  font-family: "Courier New";
+}
+span.title {
+  font-style: italic
+}
+span.unclear {
+  /*color: green;*/
+}
+td {
+  vertical-align:top;
+}
+td.center {
+  text-align: center
+}
+/*table, tr, td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+*/
+
+
+@font-face {
+ font-family: cardo;
+ src: url(font/Cardo104s.ttf) format("truetype");
+}
+
+.cardo {
+ font-family: cardo;
+}
+
+.isi-modal{z-index:2;display:none;margin:0px;margin-left:0px;border:1px black solid;padding:110px;padding-right:10%;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.4)}
+.isi-modal-content{padding:10px;margin:10px;background-color:lightyellow;position:relative;width:45%;}
+table.graphcontrols{font-size:smaller; border-style:none}
+table.graphcontrols > tr > td {padding:20px 40px;border-style:none;vertical-align: middle;}
+zzzz {border-spacing: 10px;border-collapse: separate;}
+/*                                          slider stuff   */
+
+#weightRangeValDiv {
+/*  top: -23px;
+  left: -26px;
+  z-index: -1;
+  position:relative;*/
+  /*font-size: x-small;*/
+  width: 50%;
+  color: #04AA6D;
+  text-align: right;
+}
+
+/* The slider itself */
+.slider {
+
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 20px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 35px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 15px; /* Set a specific slider handle width */
+  height: 35px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

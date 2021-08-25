@@ -22,12 +22,12 @@ The edition is a Single Page App where HTML is rebuilt using Javascript.
 
 The edition is generated from the XML file using four XSLT stylesheets.
 
-- createhtml.xsl generates index.html (main edition file), htmlfrag/glossnn.html (html fragments (by chapter) for the gloss pages), htmlfrag/textnn.html (html fragments (by chapter) for the text pages) and htmlfrag/glossmsxxxxxxxxxxxx.html (html gfragments by manuscript)
+- createhtml.xsl generates index.html (main edition file), htmlfrag/glossnn.html (html fragments (by chapter) for the gloss pages), htmlfrag/textnn.html (html fragments (by chapter) for the text pages) and htmlfrag/glossmsxxxxxxxxxxxx.html (html fragments by manuscript)
 - createnetwork.xsl generates networkaaa.js (json for the various networks)
 - createjson.xsl  generates msslist.js, mssgroups.js and clustlistmap.js  (json definition of the manuscripts, of groups of manuscripts and of the the clusters and their relation to the manuscripts)
 - shared.xsl (Contains shared functionality)
 
-The javascript files mentioned here only define variables, not actions. They are included in index.html.
+The generated javascript files only define variables, not actions. They are included in index.html.
 
 **Other files**
 

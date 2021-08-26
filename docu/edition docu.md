@@ -10,7 +10,7 @@ The edition displays the text of the _Etymologiae_ and hyperlinked to that the g
 
 **Context**
 
-The edition is static. There is no server functionality required (beyond serving web pages). A demo edition runs at [http://peterboot.nl/isidore](http://peterboot.nl/isidore). 
+The edition is static. There is no server functionality required (beyond serving web pages). 
 
 **Editon Data**
 
@@ -48,3 +48,4 @@ The edition uses a number of external javascript and CSS files:
 - https://unpkg.com/tippy.js@6 (For tooltip display)
 - cytoscape-popper.js[https://unpkg.com/@popperjs/core@2](https://unpkg.com/@popperjs/core@2) (For positioning tooltips)
 - [https://unpkg.com/layout-base/layout-base.js](https://unpkg.com/layout-base/layout-base.js)https://unpkg.com/cose-base/cose-base.jshttps://unpkg.com/cytoscape-fcose/cytoscape-fcose.js (Fcose layout algorithm in Cytoscape)
+- Cardo104s.ttf, the [Cardo font](http://scholarsfonts.net/cardofnt.html)

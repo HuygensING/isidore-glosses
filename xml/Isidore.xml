@@ -1781,37 +1781,6 @@
                   </origin>
                </history>
             </msDesc>
-            <msDesc xml:id="Valenciennes399" type="bi">
-               <msIdentifier>
-                  <settlement>Valenciennes</settlement>
-                  <institution>Bibliothèque municipale</institution>
-                  <idno>MS 399</idno>
-                  <altIdentifier>
-                     <idno type="IKID">M0375</idno>
-                  </altIdentifier>
-               </msIdentifier>
-               <physDesc>
-                  <handDesc>
-                     <handNote xml:id="Valenciennes399_main">main hand<date when-iso="800/815">9th
-                           century, in.</date></handNote>
-                     <handNote xml:id="Valenciennes399_g1">glossing hand 1<date when-iso="800/900"
-                           >9th century</date></handNote>
-                  </handDesc>
-               </physDesc>
-               <history>
-                  <origin>
-                     <origPlace>
-                        <origDate when-iso="800/815">9th century, in.</origDate>
-                        <country>France</country>
-                        <region>northern France</region>
-                        <geo precision="low">49.41705 2.80317</geo>
-                        <event>
-                           <desc>glossing</desc>
-                        </event>
-                     </origPlace>
-                  </origin>
-               </history>
-            </msDesc>
             <msDesc xml:id="BarbLat447_fol3" type="ai">
                <msIdentifier>
                   <settlement>Vatican</settlement>
@@ -3555,47 +3524,124 @@
    </facsimile>
    <text>
       <front>
-         <div xml:id="intro">
+         <div xml:id="introduction">
             <div>
                <head>INTRODUCTION</head>
                <p>The <title>Etymologiae</title> of Isidore of Seville (d. 636) was the most
                   important medieval Latin encyclopaedic work. In the early Middle Ages in
-                  particular, it was the only widely known encyclopaedic work and as such attained
-                  notable popularity documented by the survival of more than 450 early medieval
-                  manuscripts transmitting this text. Approximately thirty of the surviving pre-1000
-                  codices of the <title>Etymologiae</title> contain larger amounts of annotations
-                  (meaning at least 30 glosses) and there are additional codices with small amounts
-                  of marginalia. Altogether, the <title>Etymologiae</title> attracted over 6,800
-                  glosses in the first three hundred years of its circulation.</p>
-               <p>These glosses do not appear uniformly across Isidore’s work, which, being an
-                  encyclopaedia, covers diverse topics, from the Seven Liberal Arts, medicine and
-                  law, to precious stones, insects, games, and footwear. They tend to be
-                  concentrated in specific sections, indicating that the glossing of the
-                     <title>Etymologiae</title> was topic-driven rather than a matter of continuous
-                  reading or study. The concentration of glosses in one or more of the twenty books,
-                  into which the <title>Etymologiae</title> are divided, reveals uncannily what
-                  specific interests animated glossators in different places, times, and contexts.
-                  In this manner, we can see that the early medieval annotators were most often
-                  interest in book I of the <title>Etymologiae</title> dedicated to the discipline
-                  of grammar – it received approximately 4,250 glosses, or almost two-thirds of the
-                  total attested in the early Middle Ages. The following digital scholarly edition
-                  is an attempt to critically present the corpus of these more than 4,000 early
-                  medieval annotations to the first book of the <title>Etymologiae</title>. It
-                  accounts for 49 annotated manuscripts of the first book of the
-                     <title>Etymologiae</title>, including 20 manuscripts contain at least 30
-                  glosses to this text.</p>
+                  particular, it was the only widely known encyclopaedic work in the Latin West and
+                  as such attained notable popularity documented by the survival of more than 470
+                  early medieval manuscripts transmitting this text in full or partially.
+                  Approximately fifteen of the surviving pre-1000 codices of the
+                     <title>Etymologiae</title> contain at least 100 glosses and there are
+                  additional codices with smaller amounts of marginalia. Altogether, the
+                     <title>Etymologiae</title> attracted over 6,800 glosses in the first three
+                  hundred years of its circulation.</p>
+               <p>These glosses do not appear uniformly across Isidore’s encyclopaedia, which covers
+                  diverse topics, from the Seven Liberal Arts, medicine and law, to precious stones,
+                  insects, games, and footwear. Glosses tend to be concentrated in specific
+                  sections, indicating that the glossing of the <title>Etymologiae</title> was
+                  topic-driven rather than a matter of continuous reading or study. The
+                  concentration of glosses in one or more of the twenty books, into which the
+                     <title>Etymologiae</title> are divided, reveals uncannily what specific
+                  interests animated glossators in different places, times, and contexts. In this
+                  manner, we can see that the early medieval annotators were most often interest in
+                  book I of the <title>Etymologiae</title> dedicated to the discipline of grammar –
+                  it received approximately 4,280 glosses, or almost two-thirds of the total
+                  attested in the early Middle Ages. The following digital scholarly edition is an
+                  attempt to critically present the corpus of these 4,280 early medieval annotations
+                  to the first book of the <title>Etymologiae</title>. It accounts for 53 annotated
+                  manuscripts of the first book of the <title>Etymologiae</title>, containing
+                  anything from one to over 750 glosses.</p>
                <p>While glosses to other books appear almost always in isolation, being restricted
-                  to a single manuscript or several closely related codices, many of the glosses to
-                  the first book can be found in multiple manuscripts suggesting a degree of
-                  circulation. Indeed, when the patterns of sharing of glosses between manuscripts
-                  is probed, one can discover clusters – stable micro-collections of glosses that
-                  seem to have been transmitted together. This pattern of transmission is consistent
-                  with what we know about the use of the first book of the
+                  to a single manuscript or several textually related codices, many of the glosses
+                  to the first book can be found in multiple manuscripts suggesting a degree of
+                  circulation. More importantly, these manuscripts are often not related
+                  philologically. Indeed, when the patterns of sharing of glosses between
+                  manuscripts is probed, one can discover clusters – stable micro-collections of
+                  glosses that seem to have been transmitted together. This pattern of transmission
+                  is consistent with what we know about the use of the first book of the
                      <title>Etymologiae</title> in Carolingian schools and suggests that glosses to
                   this book were a product of school engagement. Their circulation seems at least to
                   some extent to reflect the relationships between schools in the Carolingian realm,
                   as well as the broader exchange of books, people, and teaching material between
                   various early medieval institutions.</p>
+            </div>
+            <div>
+               <head>WHAT IS A GLOSS?</head>
+               <p>While it may seem that glosses do not need to be defined, the material presented
+                  in this edition poses many problems that are well-known to those studying medieval
+                  marginalia. Above all, the term 'gloss' is functional, not a descriptive category,
+                  as it implies an interpretative relationship to the main text (i.e., a gloss
+                  comments on, explains, or renders a passage in a different language). What counts
+                  as an interpretation of a text, and therefore what should be considered a gloss
+                  (rather than, say, a correction, variant reading or addition) is sometimes not
+                  self-evident.</p>
+               <p>Moreover, glosses are often indistinguishable from other phenomena inhabiting the
+                  margins of medieval manuscripts: corrections, variant readings, marginal
+                  tabs/summaries/indices, annotation symbols, secondary additions and
+                  interpolations. Medieval annotators rarely thought of their activity in the same
+                  fashion as modern scholars do. They were most often motivated by making a certain
+                  manuscript more useful or improving its contents rather than trying to comment on
+                  a text. Indeed, annotators may not have wished to distinguish between glosses and
+                  other categories of marginalia. This is certainly true for the manuscripts of the
+                     <mentioned>Etymologiae</mentioned>, in which glosses appear in layers of
+                  marginalia, often lacking the telltale attributes, such as being introduced by i.
+                  for <mentioned>id est</mentioned> or s. for <mentioned>scilicet</mentioned>. The
+                  making of this edition, thus, entailed taking certain decisions about which
+                  textual elements appearing in the margin to interpret as glosses and which
+                  categories of marginalia to include or exclude.</p>
+               <p>While corrections, variant readings and marginal tabs/summaries/indices were
+                  excluded from this edition, it must be added that differentiating these categories
+                  from glosses is not always possible. The distinction sometimes depends on the
+                  shape of the glossed text and, therefore, on the decisions made by its editors, as
+                  can be gleaned from the comparison of Lindsay's 1991 and Spevak's 2020 editions of
+                  book I of the <mentioned>Etymologiae</mentioned>. For example, while the text of
+                  Etym. I 7.2 in Lindsay's edition reads: <mentioned>Cognomen, quia nomini
+                     coniungitur, ut Scipio</mentioned>; Spevak's edition rather reads:
+                     <mentioned>Cognomen, quia nomini coniungitur, ut Scipio Africanus</mentioned>.
+                  Indeed, some of the manuscripts examined for this edition add the word
+                     <mentioned>Africanus</mentioned> above the word <mentioned>Scipio</mentioned>.
+                  If one chooses Lindsay's edition as a basis, we can understand this addition as a
+                  gloss. However, from the perspective of Spevak's edition, it is rather a
+                  correction. For a medieval scribe, moreover, such a distinction probably did not
+                  matter.</p>
+               <p>A different problem is posed by the tendency of marginalia to move from the
+                  margins into the main text block and blending into the main text. A notable
+                  example is provided by the famous <mentioned>Scholia Vallicelliana</mentioned>,
+                  which, as we know today, began their life as personal annotations made by Paul the
+                  Deacon to a copy of the <mentioned>Etymologiae</mentioned>. If it was not for the
+                  Vallicelli manuscript, in which these scholia survive as marginalia, we would know
+                  them only as interpolations in the main text of the
+                     <mentioned>Etymologiae</mentioned>. In other similar cases, we have no way to
+                  determine whether particular additions to the text of the
+                     <mentioned>Etymologiae</mentioned> began their existence as annotations that
+                  made it into the main text block or as interpolations inserted in the margin
+                  because of the lack of space. Such a distinction may, in fact, be superficial.
+                  This is the case with passages from the anonymous treatise <mentioned>De
+                     vitiis</mentioned> that appear in some manuscripts as marginalia and in others
+                  as integrated interpolations in Etym. I 34 and 36. It is also true for some of the
+                  lengthier annotations presented in this edition that appear in manuscripts both in
+                  the margins and integrated in the main text.</p>
+               <p>In yet other cases, we find that the text of certain manuscripts contain variants
+                  that resemble glosses in their form because they are introduced by the typical
+                  formulas (<mentioned>id est</mentioned>, <mentioned>scilicet</mentioned>) or
+                  because they provide an explanation of a preceding word or phrase. While we don't
+                  encounter the same variants as marginalia, there are good reasons to thinks these
+                  are glosses that moved from margin into the main text and survive only in this
+                  integrated form. Frequently, these fossilized glosses can be shown to be very old,
+                  originating as marginalia in manuscripts from the seventh and the eighth
+                  centuries. Two identifiable examples include the glosses <mentioned>id est cola et
+                     commata</mentioned> to Etym. I 39.2 and <mentioned>hoc est fortium</mentioned>
+                  to Etym. I 39.10. Both survive today integrated in the main text in a small number
+                  of manuscripts, making it plausible that they originated as glosses.</p>
+               <p>It needs to be added that the edited text of the first book of the
+                     <mentioned>Etymologiae</mentioned> contains several passages that resemble
+                  integrated glosses in form (they are introduced by the typical formulas
+                     <mentioned>id est</mentioned> and <mentioned>scilicet</mentioned>) and function
+                  (they explain a preceding word or phrase). These passages may not be original to
+                  Isidore, but rather may be cases of very old fossilized glosses that became
+                  embedded in most copies of the <mentioned>Etymologiiae</mentioned>.</p>
             </div>
             <div>
                <head> NETWORK AS A MODEL FOR A DIGITAL SCHOLARLY EDITION</head>
@@ -3726,8 +3772,8 @@
                   <row>
                      <cell>
                         <seg rend="center">
-                           <ref target="#"
-                              action="openisitab('network');setTimeout(function () {func_ms_div(network_ms_div,cy,true)}, 250 )">
+                           <ref target="#network-ms_div"
+                              action="openisitab('network',false);setTimeout(function () {func_ms_div(network_ms_div,cy,true,false)}, 250 )">
                               <figure source="pics/network-ms-div.png"
                                  style="height:100px; width:100px;">
                                  <figDesc>A bimodal network of manuscripts and chapters.</figDesc>
@@ -3735,23 +3781,24 @@
                         </seg>
                      </cell>
                      <cell>A bimodal network of manuscripts and chapters. The 44 chapters of the
-                        first book of the <title>Etymologiae</title> are displayed vertically. This
-                        mode allows the users to see which manuscripts contain glosses to which
-                        chapters of book I, the thickness of an edge corresponding to the sum of the
-                        weights of the glosses to a specific chapter in a specific manuscript (i.e.,
-                        a thick edge means that given manuscript contains both many and very
-                        non-trivial glosses to that chapter). The manuscripts' horizontal distance
-                        to the chapters are proportional to the the number of glossed chapters it
-                        contais (i.e., its degree). Its vertical position depends on where most of
-                        the glosses are concentrated, so that a uniformly glossed manuscript should
-                        appear in the middle, while having more glosses in the first or the last
-                        chapters would move it upwards or downwards respectively.</cell>
+                        first book of the <title>Etymologiae</title> are displayed vertically (green
+                        discs). This mode allows the users to see which manuscripts contain glosses
+                        to which chapters of book I, the thickness of an edge corresponding to the
+                        sum of the weights of the glosses to a specific chapter in a specific
+                        manuscript (i.e., a thick edge means that given manuscript contains both
+                        many and very non-trivial glosses to that chapter). The manuscripts'
+                        horizontal distance to the chapters are proportional to the the number of
+                        glossed chapters it contais (i.e., its degree). Its vertical position
+                        depends on where most of the glosses are concentrated, so that a uniformly
+                        glossed manuscript should appear in the middle, while having more glosses in
+                        the first or the last chapters would move it upwards or downwards
+                        respectively.</cell>
                   </row>
                   <row>
                      <cell>
                         <seg rend="center">
-                           <ref target="#"
-                              action="openisitab('network');setTimeout(function () {func_ms_clus(network_ms_clus,cy,true)}, 250 )">
+                           <ref target="#network-ms_clus"
+                              action="openisitab('network',false);setTimeout(function () {func_ms_clus(network_ms_clus,cy,true,false)}, 250 )">
                               <figure source="pics/network-ms-clust.png"
                                  style="height:100px; width:100px;">
                                  <figDesc>A bimodal network of manuscripts and clusters.</figDesc>
@@ -3759,8 +3806,8 @@
                            </ref>
                         </seg>
                      </cell>
-                     <cell>A bimodal network of manuscripts and clusters. It represents the 54
-                        annotated manuscripts (red disks) and the 25 identified clusters of glosses
+                     <cell>A bimodal network of manuscripts and clusters. It represents the 53
+                        annotated manuscripts (red discs) and the 32 identified clusters of glosses
                         which appear in more than one witness (colourful squares). This mode allows
                         the users to see which clusters appear in which manuscripts, each edge
                         representing the sum of glosses appearing in a specific manuscript that
@@ -3771,8 +3818,8 @@
                   <row>
                      <cell>
                         <seg rend="center">
-                           <ref target="#"
-                              action="openisitab('network');setTimeout(function () {func_ms(network_ms,cy,true)}, 250 )">
+                           <ref target="#network-ms_ms"
+                              action="openisitab('network',false);setTimeout(function () {func_ms(network_ms,cy,true,false)}, 250 )">
                               <figure source="pics/network-ms.png"
                                  style="height:100px; width:100px;">
                                  <figDesc>A multigraph of manuscripts with edges for each cluster
@@ -3780,12 +3827,15 @@
                               </figure></ref>
                         </seg>
                      </cell>
-                     <cell>A multigraph representing the mutual relationships between the 54
+                     <cell>A multigraph representing the mutual relationships between the 53
                         manuscripts based on the presence of shared glosses. Each edge represents
-                        the sum of glosses shared by two manuscripts, within a certain cluster. They
+                        the sum of glosses shared by two manuscripts within a certain cluster. They
                         are coloured in the same manner as these clusters in the previous
                         visualization mode. The nodes' initial layout is based on geography and
-                        corresponds to (roughly) the assumed place of their glossing.</cell>
+                        corresponds to (roughly) the assumed place of their glossing. The upper left
+                        segment of the graph, thus, represents England, while the lower right
+                        segment contains manuscripts annotated in northern Italy. The central part
+                        of the graph correspond to northern France.</cell>
                   </row>
                </table>
             </div>
@@ -3853,6 +3903,24 @@
                   all identified passages from written sources that appear among the glosses in the
                   edited corpus. Included are also several parallels with glossaries edited in the
                      <title>Corpus Glossariorum Latinorum</title>.</p>
+            </div>
+         </div>
+         <div xml:id="bibliography">
+            <div>
+               <head>BIBLIOGRAPHY</head>
+               <p>Following authors are referenced in the notes to the glosses:</p>
+               <list>
+                  <item>D. O'Croinin, 'A 'Lost' Old Irish Gloss Rediscovered',
+                        <mentioned>Peritia</mentioned> 32 (2021), forthcoming.</item>
+                  <item><mentioned>Französisches Etymologisches Wörterbuch</mentioned>, edited by
+                     Walther von Wartburg et al., 25 vols. (Basel and Nancy, 1973-2002).</item>
+                  <item>W. Meyer-Lübke, <mentioned>Romanisches Etymologisches
+                     Wörterbuch</mentioned>, 3 vols. (Heidelberg, 1935).</item>
+                  <item>E. Steinmeyer and E. Sievers, <mentioned>Die althochdeutsche Glossen II:
+                        Glossen zu nichtbiblischen Schriften</mentioned> (Berlin, 1882).</item>
+                  <item>I. Williams, 'Irische und Britannische Glossen', <mentioned>Zeitschrift für
+                        celtische Philologie</mentioned> 21:1 (1940), 290-306.</item>
+               </list>
             </div>
          </div>
       </front>
@@ -5368,22 +5436,22 @@
                <ab n="19">⋝ Diple <seg type="lemma" xml:id="L21.19.1">superne</seg> obolata ponitur
                      <seg type="lemma" xml:id="L21.19.2">ad conditiones</seg> locorum ac temporum
                   personarumque mutatas.</ab>
-               <ab n="20">&gt;&#x0305;&lt; Diple recta et adversa superne obolata ponitur finita loco suo <seg
-                     type="lemma" xml:id="L21.20.1">monade</seg>, <seg type="lemma"
+               <ab n="20">&gt;&#x0305;&lt; Diple recta et adversa superne obolata ponitur finita
+                  loco suo <seg type="lemma" xml:id="L21.20.1">monade</seg>, <seg type="lemma"
                      xml:id="L21.20.2">significatque</seg> similem sequentem quoque esse.</ab>
-               <ab n="21"><seg rend="cardo">&#119321;</seg> Ceraunium ponitur quotiens multi versus <seg type="lemma"
-                     xml:id="L21.21.1">inprobantur</seg>, nec per singulos obolatur; <foreign
-                     xml:lang="gr">κεραύνιον</foreign> enim <seg type="lemma" xml:id="L21.21.2"
-                     >fulmen</seg> dicitur.</ab>
+               <ab n="21"><seg rend="cardo">&#119321;</seg> Ceraunium ponitur quotiens multi versus
+                     <seg type="lemma" xml:id="L21.21.1">inprobantur</seg>, nec per singulos
+                  obolatur; <foreign xml:lang="gr">κεραύνιον</foreign> enim <seg type="lemma"
+                     xml:id="L21.21.2">fulmen</seg> dicitur.</ab>
                <ab n="22">⳩ <seg type="lemma" xml:id="L21.22.1"><app>
                         <lem>Crisimon</lem>
                         <rdg>Chrisimon</rdg>
                      </app></seg>. <pb corresp="#Bologna797_67r"/><seg type="lemma"
                      xml:id="L21.22.2">Haec</seg> sola ex voluntate uniuscuiusque ad aliquid
                   notandum ponitur.</ab>
-               <ab n="23"><seg rend="cardo">&#xf0284;</seg> Phi et Ro, id est <foreign xml:lang="gr">φροντίς</foreign>. Haec, ubi
-                  aliquid obscuritatis est, <seg type="lemma" xml:id="L21.23.1">ob
-                     sollicitudinem</seg> ponitur.</ab>
+               <ab n="23"><seg rend="cardo">&#xf0284;</seg> Phi et Ro, id est <foreign xml:lang="gr"
+                     >φροντίς</foreign>. Haec, ubi aliquid obscuritatis est, <seg type="lemma"
+                     xml:id="L21.23.1">ob sollicitudinem</seg> ponitur.</ab>
                <ab n="24">⥾ Anchora superior ponitur ubi aliqua res magna <seg type="lemma"
                      xml:id="L21.24.1">omnino</seg> est.</ab>
                <ab n="25">⥿ Anchora inferior, ubi aliquid <seg type="lemma" xml:id="L21.25.1"
@@ -8841,7 +8909,7 @@
                condiderunt, unde et Lucan<unclear>us</unclear></gloss>
             <gloss xml:id="L3.5.16_7" corresp="#Clm6250"><seg rend="integrated">Phoenices dicti a
                   rubro mare, quod proficit in Syriam, qui Sidonem urbem inibi
-               condiderunt</seg></gloss>
+                  condiderunt</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L3.5.16_8" corresp="#Paris7670" hand="#Paris7670_g1">id est rubicundi
                dicuntur</gloss>
             <gloss xml:id="L3.5.16_9" corresp="#Paris11278" hand="#Paris11278_g2">rubei</gloss>
@@ -10484,7 +10552,7 @@
                   as qm</note></gloss>
             <gloss xml:id="L9.3.4_2" corresp="#Clm4541"><seg rend="integrated">Nam perfecta a
                   perficiendo ut lego. Tunc enim dicendum est quando in praesenti tempore
-                  legimus</seg></gloss>
+                  legimus</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L9.3.4_3" corresp="#Clm6250">Nam perfecta a perficiendo ut lego. Tunc
                enim dicendum est quando in praesenti tempore legimus</gloss>
             <gloss xml:id="L9.3.4_4" corresp="#Schaffhausen42" hand="#Schaffhausen42_g1">Perfecta a
@@ -11208,7 +11276,7 @@
                   <corr>Achillis</corr>
                </choice> nominatur</gloss>
             <gloss xml:id="L17.2.2_4" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">a Pyrrho</seg></gloss>
+                  rend="integrated">a Pyrrho</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L17.2.2_5" corresp="#Paris11278">asona<gap reason="unreadable"/></gloss>
             <gloss xml:id="L17.2.2_6" corresp="#Reims426">puerilis</gloss>
             <gloss xml:id="L17.2.2_7" corresp="#VLF82">sive ab igne appellatur, qui<unclear>a ignis
@@ -11508,11 +11576,12 @@
                      <mentioned>id</mentioned></note> admirandum est in his duobus pedibus, quod
                   prior suscepit qualitatem nominis contrarietate sequenti: in contrarietatem
                   ponitur eo quod brevitas in se percurrit; ille vero qui in contrarie ponitur non
-                  de ea sumit vocabulum sed qualitate syllabarum</seg></gloss>
+                  de ea sumit vocabulum sed qualitate syllabarum</seg><note>Integrated into the main
+                  text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L17.7.6" witCount="1">
             <gloss xml:id="L17.7.6_1" corresp="#Paris7585"><seg rend="integrated">id est
-                  repercussionem</seg></gloss>
+                  repercussionem</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L17.8.1" witCount="1">
             <gloss xml:id="L17.8.1_1" corresp="#Trier100">est</gloss>
@@ -11700,8 +11769,8 @@
                   <sic>inaequale</sic>
                   <corr>inaequale<supplied>s</supplied></corr>
                </choice></gloss>
-            <gloss xml:id="L17.17.1_4" corresp="#Reims426">inaequales<note>An ink gloss overlaying an
-                  identical dry-point gloss</note></gloss>
+            <gloss xml:id="L17.17.1_4" corresp="#Reims426">inaequales<note>An ink gloss overlaying
+                  an identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L17.17.2" witCount="3">
             <hi:glossCluster weight="2" ana="#H2">
@@ -12166,7 +12235,7 @@
          </hi:glossGrp>
          <hi:glossGrp target="#L18.6.2" witCount="1">
             <gloss xml:id="L18.6.2_1" corresp="#VLO41" hand="#VLO41_main"><seg rend="integrated"
-                  >terminus vel finis</seg></gloss>
+                  >terminus vel finis</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L19.1.1" witCount="1">
             <gloss xml:id="L19.1.1_1" corresp="#VLO41"><seg type="writing" hand="#tirnote"
@@ -12338,7 +12407,8 @@
          <hi:glossGrp target="#L20.2.4" witCount="1">
             <gloss xml:id="L20.2.4_1" corresp="#MadridRAH25">periodus: plena sententia</gloss>
             <gloss xml:id="L20.2.4_2" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">id est plenitudo</seg></gloss>
+                  rend="integrated">id est plenitudo</seg><note>Integrated into the main
+               text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L20.2.5" witCount="1">
             <gloss xml:id="L20.2.5_1" corresp="#Harley3941" hand="#Harley3941_main"
@@ -12369,7 +12439,8 @@
                distinctio</gloss>
             <gloss xml:id="L20.4.3_3" corresp="#Queen320">id est media distinctio</gloss>
             <gloss xml:id="L20.4.3_4" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">id est media distinctio</seg></gloss>
+                  rend="integrated">id est media distinctio</seg><note>Integrated into the main
+                  text</note></gloss>
             <gloss xml:id="L20.4.3_5" corresp="#VatLat5763">id est media distinctio</gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L20.5.1" witCount="1">
@@ -12632,7 +12703,7 @@
             <gloss xml:id="L21.8.1_8" corresp="#VeniceII46">in separatione</gloss>
             <gloss xml:id="L21.8.1_9" corresp="#CottonCaligulaAxv">Graecum</gloss>
             <gloss xml:id="L21.8.1_10" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">Graece</seg></gloss>
+                  rend="integrated">Graece</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L21.8.2" witCount="1">
             <gloss xml:id="L21.8.2_1" corresp="#VLO41">hoc est discernendas</gloss>
@@ -12802,7 +12873,7 @@
          </hi:glossGrp>
          <hi:glossGrp target="#L21.14.6" witCount="4">
             <gloss xml:id="L21.14.6_1" corresp="#VLO15" hand="#VLO15_main"><seg rend="integrated"
-                  >nepotis a serpente</seg></gloss>
+                  >nepotis a serpente</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L21.14.6_2" corresp="#Harley3941" hand="#Harley3941_main">quia aliquando
                Olympum montem posuit pro caelo propter altitudinem</gloss>
             <gloss xml:id="L21.14.6_3" corresp="#Paris7585">ne putetur caelum Olympus</gloss>
@@ -12933,7 +13004,7 @@
                   sententia</seg></gloss>
             <gloss xml:id="L21.20.1_3" corresp="#Junius25">unitate</gloss>
             <gloss xml:id="L21.20.1_4" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">uno</seg></gloss>
+                  rend="integrated">uno</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L21.20.1_5" corresp="#Paris11278">una disputatio</gloss>
             <gloss xml:id="L21.20.1_6" corresp="#Reims426">una sententia</gloss>
          </hi:glossGrp>
@@ -13043,7 +13114,8 @@
             <gloss xml:id="L21.28.3_1" corresp="#CottonCaligulaAxv">expositum</gloss>
             <gloss xml:id="L21.28.3_2" corresp="#Harley3941" hand="#Harley3941_g1">expositum</gloss>
             <gloss xml:id="L21.28.3_3" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">expositum</seg></gloss>
+                  rend="integrated">expositum</seg><note>Integrated into the main
+               text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L22.1.1" witCount="1">
             <gloss xml:id="L22.1.1_1" corresp="#Orleans296" hand="#Orleans296_g1">vulgares dictae
@@ -13303,7 +13375,8 @@
                <ptr target="#L23.2.7_2"/>
                <ptr target="#L23.2.7_4"/>
             </hi:glossCluster>
-            <gloss xml:id="L23.2.7_1" corresp="#Cologne123">id est dubietates</gloss>
+            <gloss xml:id="L23.2.7_1" corresp="#Cologne123"><seg rend="integrated">id est
+                  dubietates</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L23.2.7_2" corresp="#VLO41">id est <choice>
                   <sic>dubigetas</sic>
                   <corr>dubietas</corr>
@@ -14441,7 +14514,8 @@
             <gloss xml:id="L29.4.6_4" corresp="#Orleans296" hand="#Orleans296_g1">Graecus <seg
                   type="writing" hand="#tirnote">dicit</seg> silon</gloss>
             <gloss xml:id="L29.4.6_5" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">Graece silon</seg></gloss>
+                  rend="integrated">Graece silon</seg><note>Integrated into the main
+               text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L29.4.7" witCount="4">
             <hi:glossCluster weight="2" ana="#G">
@@ -14454,7 +14528,8 @@
             </hi:glossCluster>
             <gloss xml:id="L29.4.7_1" corresp="#Harley3941" hand="#Harley3941_g1">doma</gloss>
             <gloss xml:id="L29.4.7_2" corresp="#Orleans296" hand="#Orleans296_g1">domata</gloss>
-            <gloss xml:id="L29.4.7_3" corresp="#Paris7585" hand="#Paris7585_main">doma</gloss>
+            <gloss xml:id="L29.4.7_3" corresp="#Paris7585" hand="#Paris7585_main"><seg
+                  rend="integrated">doma</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L29.4.7_4" corresp="#Reims426">domata: tecta</gloss>
             <gloss xml:id="L29.4.7_5" corresp="#Orleans296" hand="#Orleans296_g1"
                source="#Etym15.3.1">ex Graeca appel<unclear>latio</unclear>ne vocata, nam mata
@@ -14745,8 +14820,8 @@
             </hi:glossCluster>
             <gloss xml:id="L32.1.13_1" corresp="#VLO41">consuetudo</gloss>
             <gloss xml:id="L32.1.13_2" corresp="#Paris7670"><gap reason="unreadable"/></gloss>
-            <gloss xml:id="L32.1.13_3" corresp="#Reims426">consuetudines<note>An ink gloss overlaying
-                  an identical dry-point gloss</note></gloss>
+            <gloss xml:id="L32.1.13_3" corresp="#Reims426">consuetudines<note>An ink gloss
+                  overlaying an identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L32.2.1" witCount="1">
             <gloss xml:id="L32.2.1_1" corresp="#VLO41">id est corruptio alienae dictionis</gloss>
@@ -15210,10 +15285,11 @@
                <ptr target="#L34.5.7_3"/>
                <ptr target="#L34.5.9_1"/>
             </hi:glossCluster>
-            <gloss xml:id="L34.5.7_1" corresp="#Laon447"><seg rend="integrated">videre</seg></gloss>
+            <gloss xml:id="L34.5.7_1" corresp="#Laon447"><seg rend="integrated"
+                  >videre</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L34.5.7_2" corresp="#VLF82">videre</gloss>
             <gloss xml:id="L34.5.7_3" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">videre</seg></gloss>
+                  rend="integrated">videre</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L34.5.8" witCount="1">
             <gloss xml:id="L34.5.8_1" corresp="#Junius25">Graeca</gloss>
@@ -15390,7 +15466,7 @@
             <gloss xml:id="L34.9.6_2" corresp="#Orleans296" hand="#Orleans296_g1">usitatur</gloss>
             <gloss xml:id="L34.9.6_3" corresp="#Queen320">id est vivit</gloss>
             <gloss xml:id="L34.9.6_4" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">vivit</seg></gloss>
+                  rend="integrated">vivit</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L34.9.6_5" corresp="#Reims426">si vivit</gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L34.9.7" witCount="1">
@@ -16115,11 +16191,11 @@
             <gloss xml:id="L36.7.4_2" corresp="#Paris7585">id est noctuae</gloss>
             <gloss xml:id="L36.7.4_3" corresp="#Harley3941" hand="#Harley3941_main" xml:lang="roa"
                   >cinciala<note>From Lat. <mentioned>zinzala</mentioned> (‘small fly, mosquito‘),
-                  Old French <mentioned>cincele</mentioned>, see <mentioned>Französisch
+                  Old French <mentioned>cincele</mentioned>, see <mentioned>Französisches
                      Etymologisches Wörterbuch</mentioned> 14, 664a</note></gloss>
             <gloss xml:id="L36.7.4_4" corresp="#Orleans296" hand="#Orleans296_g1" xml:lang="roa"
                   >cinicella<note>From Lat. <mentioned>zinzala</mentioned> (‘small fly, mosquito‘),
-                  Old French <mentioned>cincele</mentioned>, see <mentioned>Französisch
+                  Old French <mentioned>cincele</mentioned>, see <mentioned>Französisches
                      Etymologisches Wörterbuch</mentioned> 14, 664a, but here clearly refering to a
                   bird</note> a suo l<unclear>uctu</unclear> et planctu nomin<unclear>atur</unclear>
                quia semper flet <gap reason="unreadable"/></gloss>
@@ -17157,8 +17233,8 @@
             <gloss xml:id="L37.3.4_8" corresp="#Paris7670" hand="#Paris7670_g1">id est
                   n<unclear>av</unclear>is</gloss>
             <gloss xml:id="L37.3.4_9" corresp="#Reims426">navis</gloss>
-            <gloss xml:id="L37.3.4_10" corresp="#Reims426">navis de pine<note>An ink gloss overlaying
-                  an identical dry-point gloss</note></gloss>
+            <gloss xml:id="L37.3.4_10" corresp="#Reims426">navis de pine<note>An ink gloss
+                  overlaying an identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.3.5" witCount="3">
             <hi:glossCluster weight="2" ana="#F1">
@@ -17218,8 +17294,8 @@
             </hi:glossCluster>
             <gloss xml:id="L37.4.3_1" corresp="#Harley3941" hand="#Harley3941_main">vetula</gloss>
             <gloss xml:id="L37.4.3_2" corresp="#Orleans296" hand="#Orleans296_g1">vetula</gloss>
-            <gloss xml:id="L37.4.3_3" corresp="#Reims426">spumas aquarum<note>An ink gloss overlaying
-                  an identical dry-point gloss</note></gloss>
+            <gloss xml:id="L37.4.3_3" corresp="#Reims426">spumas aquarum<note>An ink gloss
+                  overlaying an identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.4.4" witCount="3">
             <hi:glossCluster weight="2" ana="#F1">
@@ -17422,7 +17498,8 @@
                <ptr target="#L37.6.12_3"/>
             </hi:glossCluster>
             <gloss xml:id="L37.6.11_1" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">id est nomen navis de pino factae</seg></gloss>
+                  rend="integrated">id est nomen navis de pino factae</seg><note>Integrated into the
+                  main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.6.12" witCount="5">
             <hi:glossCluster weight="2" ana="#F1">
@@ -17647,12 +17724,12 @@
             <gloss xml:id="L37.10.2_3" corresp="#Reims426">efficiens est qui efficit</gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.10.3" witCount="1">
-            <gloss xml:id="L37.10.3_1" corresp="#Reims426">pro freno<note>An ink gloss overlaying
-               an identical dry-point gloss</note></gloss>
+            <gloss xml:id="L37.10.3_1" corresp="#Reims426">pro freno<note>An ink gloss overlaying an
+                  identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.10.4" witCount="1">
-            <gloss xml:id="L37.10.4_1" corresp="#Reims426">Neptunus<note>An ink gloss overlaying
-               an identical dry-point gloss</note></gloss>
+            <gloss xml:id="L37.10.4_1" corresp="#Reims426">Neptunus<note>An ink gloss overlaying an
+                  identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.10.5" witCount="1">
             <gloss xml:id="L37.10.5_1" corresp="#Bologna797">fortis m<gap reason="unreadable"/>
@@ -17736,8 +17813,8 @@
             <gloss xml:id="L37.11.7_4" corresp="#Orleans296" hand="#Orleans296_g1">Troilus</gloss>
             <gloss xml:id="L37.11.7_5" corresp="#Paris7559">Troilus</gloss>
             <gloss xml:id="L37.11.7_6" corresp="#Paris7585">scilicet Troilus nomine</gloss>
-            <gloss xml:id="L37.11.7_7" corresp="#Reims426">Troilus<note>An ink gloss overlaying
-               an identical dry-point gloss</note></gloss>
+            <gloss xml:id="L37.11.7_7" corresp="#Reims426">Troilus<note>An ink gloss overlaying an
+                  identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.11.8" witCount="2">
             <hi:glossCluster weight="2" ana="#M">
@@ -17777,7 +17854,7 @@
             <gloss xml:id="L37.12.1_1" corresp="#VLO41">positum</gloss>
             <gloss xml:id="L37.12.1_2" corresp="#Paris7559" hand="#Paris7559_g2">positum</gloss>
             <gloss xml:id="L37.12.1_3" corresp="#Paris7670" hand="#Paris7670_main"><seg
-                  rend="integrated">positum</seg></gloss>
+                  rend="integrated">positum</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.12.2" witCount="4">
             <hi:glossCluster weight="2" ana="#I1">
@@ -18369,8 +18446,8 @@
             </hi:glossCluster>
             <gloss xml:id="L37.21.6_1" corresp="#Paris7670" hand="#Paris7670_g1">id est demonstrat
                illa unda</gloss>
-            <gloss xml:id="L37.21.6_2" corresp="#Reims426">demonstrat<note>An ink gloss overlaying an
-                  identical dry-point gloss</note></gloss>
+            <gloss xml:id="L37.21.6_2" corresp="#Reims426">demonstrat<note>An ink gloss overlaying
+                  an identical dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.21.7" witCount="4">
             <hi:glossCluster weight="2" ana="#X1">
@@ -18462,8 +18539,8 @@
             <gloss xml:id="L37.22.7_2" corresp="#Reims426"><choice>
                   <sic>cralia</sic>
                   <corr>cr<supplied>as</supplied> alia</corr>
-               </choice> mittam<note>An ink gloss overlaying an identical dry-point gloss;the mistake
-                     <mentioned>cralia</mentioned> is a result of an incorrect reading of an
+               </choice> mittam<note>An ink gloss overlaying an identical dry-point gloss;the
+                  mistake <mentioned>cralia</mentioned> is a result of an incorrect reading of an
                   underlying dry-point gloss</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.22.8" witCount="1">
@@ -18676,7 +18753,8 @@
             <gloss xml:id="L37.24.12_1" corresp="#Harley3941" hand="#Harley3941_g1"
                >parvissimi</gloss>
             <gloss xml:id="L37.24.12_2" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">id est parvissimi homines qui fiunt in aquis</seg></gloss>
+                  rend="integrated">id est parvissimi homines qui fiunt in
+                  aquis</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.24.13" witCount="4">
             <hi:glossCluster weight="2" ana="#X1">
@@ -18873,7 +18951,7 @@
                   rend="integrated">novus miles, tria nomina habuit: id est Neoptolemus et <subst>
                      <del>Acidus</del>
                      <add>Aeacidus</add>
-                  </subst> et Achilles</seg></gloss>
+                  </subst> et Achilles</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L37.29.7" witCount="1">
             <gloss xml:id="L37.29.7_1" corresp="#Orleans296" hand="#Orleans296_g1">nobilem <sic><gap
@@ -19531,18 +19609,20 @@
                <ptr target="#L39.2.8_3"/>
             </hi:glossCluster>
             <gloss xml:id="L39.2.8_1" corresp="#Bologna797" hand="#Bologna797_main"><seg
-                  rend="integrated">id est cola et commata</seg><note>The same embedded gloss
-                  appears in <ref target="#Paris11278">Paris11278</ref></note></gloss>
+                  rend="integrated">id est cola et commata</seg><note>The same integrated gloss
+                  appears in <ref target="#Paris11278">Paris11278</ref> and
+                     <ref>Schaffhausen42</ref></note></gloss>
             <gloss xml:id="L39.2.8_2" corresp="#Paris11278" hand="#Paris11278_main"><seg
                   rend="integrated">id est cola et <choice>
                      <sic>commita</sic>
                      <corr>commata</corr>
-                  </choice></seg><note>The same embedded gloss appears in <ref target="#Bologna797"
-                     >Bologna 797</ref></note></gloss>
+                  </choice></seg><note>The same integrated gloss appears in <ref
+                     target="#Bologna797">Bologna 797</ref> and
+               <ref>Schaffhausen42</ref></note></gloss>
             <gloss xml:id="L39.2.8_3" corresp="#Schaffhausen42" hand="#Schaffhausen42_g1">id est
-               cola et commata<note>The same gloss appears embedded in a number of manuscripts
-                  including <ref target="#Bologna797">Bologna 797</ref>and <ref target="#Paris11278"
-                     >Paris 11278</ref></note></gloss>
+               cola et commata<note>The same gloss appears integrated in <ref target="#Bologna797"
+                     >Bologna 797</ref>and <ref target="#Paris11278">Paris
+               11278</ref></note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L39.2.9" witCount="2">
             <hi:glossCluster weight="1" ana="#X1">
@@ -19759,7 +19839,8 @@
          <hi:glossGrp target="#L39.7.5" witCount="2">
             <gloss xml:id="L39.7.5_1" corresp="#Orleans296" hand="#Orleans296_g1">composuit </gloss>
             <gloss xml:id="L39.7.5_2" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">vel scripsit</seg></gloss>
+                  rend="integrated">vel scripsit</seg><note>Integrated into the main
+               text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L39.7.6" witCount="1">
             <gloss xml:id="L39.7.6_1" corresp="#Paris7670" hand="#Paris7670_g1">fecit </gloss>
@@ -19879,14 +19960,16 @@
                <ptr target="#L39.10.7_9"/>
             </hi:glossCluster>
             <gloss xml:id="L39.10.7_1" corresp="#Harley3941" hand="#Harley3941_main"><seg
-                  rend="integrated">hoc est virorum fortium</seg></gloss>
+                  rend="integrated">hoc est virorum fortium</seg><note>Integrated into the main
+                  text</note></gloss>
             <gloss xml:id="L39.10.7_2" corresp="#Orleans296" hand="#Orleans296_g1">seniorum vel
                dominorum </gloss>
             <gloss xml:id="L39.10.7_3" corresp="#Queen320">hoc est fortium</gloss>
             <gloss xml:id="L39.10.7_4" corresp="#Paris7559" hand="#Paris7559_g1"><seg type="writing"
                   hand="#tirnote">virorum fortium</seg></gloss>
             <gloss xml:id="L39.10.7_5" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">hoc est fortium</seg></gloss>
+                  rend="integrated">hoc est fortium</seg><note>Integrated into the main
+               text</note></gloss>
             <gloss xml:id="L39.10.7_6" corresp="#Paris7670" hand="#Paris7670_g1">id est
                fortium</gloss>
             <gloss xml:id="L39.10.7_7" corresp="#Paris10293">hoc est fortium</gloss>
@@ -20203,7 +20286,8 @@
                   <corr>certo</corr>
                </choice> auctore</gloss>
             <gloss xml:id="L39.15.5_3" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">id est inventore</seg></gloss>
+                  rend="integrated">id est inventore</seg><note>Integrated into the main
+               text</note></gloss>
             <gloss xml:id="L39.15.5_4" corresp="#Paris7671" hand="#Paris7671_g6">auctore </gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L39.15.6" witCount="2">
@@ -20293,9 +20377,11 @@
                civitatis</gloss>
             <gloss xml:id="L39.16.6_3" corresp="#Clm6411">civitas</gloss>
             <gloss xml:id="L39.16.6_4" corresp="#Paris7585">id est cive<note>Was perhaps an
-                  abbreviation of <mentioned>civitate</mentioned> that lost a suspension stroke</note></gloss>
+                  abbreviation of <mentioned>civitate</mentioned> that lost a suspension
+                  stroke</note></gloss>
             <gloss xml:id="L39.16.6_5" corresp="#Paris7670" hand="#Paris7670_g1">proprium nomen </gloss>
-            <gloss xml:id="L39.16.6_6" corresp="#Reims426"><seg type="writing" hand="#drypoint"><unclear>civita</unclear>s</seg></gloss>
+            <gloss xml:id="L39.16.6_6" corresp="#Reims426"><seg type="writing" hand="#drypoint"
+                     ><unclear>civita</unclear>s</seg></gloss>
             <gloss xml:id="L39.16.6_7" corresp="#Harley3941" hand="#Harley3941_main">Lacedaemon
                civitas est in Graecia. Ipsa est Spartana</gloss>
             <gloss xml:id="L39.16.6_8" corresp="#Orleans296" hand="#Orleans296_g1">Lacedaemon
@@ -20323,7 +20409,7 @@
                >auderent</gloss>
             <gloss xml:id="L39.16.10_2" corresp="#Queen320">auderent</gloss>
             <gloss xml:id="L39.16.10_3" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">auderent</seg></gloss>
+                  rend="integrated">auderent</seg><note>Integrated into the main text</note></gloss>
             <gloss xml:id="L39.16.10_4" corresp="#Paris7670" hand="#Paris7670_g1">subaudi liceret
             </gloss>
          </hi:glossGrp>
@@ -21323,7 +21409,8 @@
             <gloss xml:id="L40.4.16_2" corresp="#Harley3941" hand="#Harley3941_g1">subiacens</gloss>
             <gloss xml:id="L40.4.16_3" corresp="#Queen320">subiacens</gloss>
             <gloss xml:id="L40.4.16_4" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">subiacens</seg></gloss>
+                  rend="integrated">subiacens</seg><note>Integrated into the main
+               text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L40.5.1" witCount="2">
             <gloss xml:id="L40.5.1_1" corresp="#Junius25">Pelops homo</gloss>
@@ -21512,7 +21599,7 @@
                >instructione</gloss>
             <gloss xml:id="L40.7.11_3" corresp="#Paris7585" hand="#Paris7585_main"><seg
                   rend="integrated">ut dicitur: Date canes vestros, ne fiat discordia inter
-                  nos</seg></gloss>
+                  nos</seg><note>Integrated into the main text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L40.7.12" witCount="1">
             <gloss xml:id="L40.7.12_1" corresp="#Queen320">cura</gloss>
@@ -21880,7 +21967,8 @@
             <gloss xml:id="L43.1.8_2" corresp="#Orleans296" hand="#Orleans296_g1">annorum
                curricula</gloss>
             <gloss xml:id="L43.1.8_3" corresp="#Paris7585" hand="#Paris7585_main"><seg
-                  rend="integrated">id est numerus</seg></gloss>
+                  rend="integrated">id est numerus</seg><note>Integrated into the main
+               text</note></gloss>
          </hi:glossGrp>
          <hi:glossGrp target="#L43.1.9" witCount="2">
             <hi:glossCluster weight="2" ana="#N1">

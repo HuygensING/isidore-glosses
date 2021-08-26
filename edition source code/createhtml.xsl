@@ -73,13 +73,14 @@
                 <div id="left">
                     <div class="w3-sidebar w3-bar-block w3-card w3-black" id="leftmenu">
                         <h5 class="w3-bar-item w3-small w3-button">Menu</h5>
-                        <button class="w3-bar-item w3-button lefttablink w3-red w3-small" onclick="openlefttab('home')" id="tabhome">Home</button>
-                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('intro')" id="tabintro">Intro</button>
-                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('msdesc')" id="tabmsdesc">Ms desc</button>
-                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('msstats')" id="tabmsstats">Ms stats</button>
-                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('clusters')" id="tabclusters">Clusters</button>
-                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('networks')" id="tabnetworks">Networks</button>
-                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('sources')" id="tabsources">Sources</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-red w3-small" onclick="openlefttab('home','',true)" id="tabhome">Home</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('intro','',true)" id="tabintro">Intro</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('msdesc','',true)" id="tabmsdesc">Ms desc</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('msstats','',true)" id="tabmsstats">Ms stats</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('clusters','',true)" id="tabclusters">Clusters</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('networks','',true)" id="tabnetworks">Networks</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('sources','',true)" id="tabsources">Sources</button>
+                        <button class="w3-bar-item w3-button lefttablink w3-small" onclick="openlefttab('biblio','',true)" id="tabbiblio">Biblio</button>
                         <xsl:for-each select="//tei:div[@type='chapter']">
                             <button class="w3-bar-item w3-button w3-small lefttablink">
                                 <xsl:attribute name="id">
@@ -89,7 +90,7 @@
                                 <xsl:attribute name="onclick">
                                     <xsl:text>openlefttab('</xsl:text>
                                     <xsl:value-of select="@n"/>
-                                    <xsl:text>')</xsl:text>
+                                    <xsl:text>','',true)</xsl:text>
                                 </xsl:attribute>
                                 <xsl:value-of select="@n"/>
                             </button>
@@ -149,7 +150,7 @@
                         </p>
                     </div>
                     <div id="intro" class="w3-container lefttab w3-animate-opacity" style="display:none">
-                        <xsl:apply-templates select="//tei:front/tei:div[@xml:id = 'intro']"/>
+                        <xsl:apply-templates select="//tei:front/tei:div[@xml:id = 'introduction']"/>
                     </div>
                     <div id="clusters" class="w3-container lefttab w3-animate-opacity" style="display:none">
                         <xsl:apply-templates select="//tei:front/tei:div[@xml:id = 'clusters']"/>
@@ -169,13 +170,16 @@
                             <xsl:apply-templates select="$preprocess//tei:standOff//tei:bibl" mode="source"/>
                         </div>
                     </div>
+                    <div id="biblio" class="w3-container lefttab w3-animate-opacity" style="display:none">
+                        <xsl:apply-templates select="//tei:front/tei:div[@xml:id = 'bibliography']"/>
+                    </div>
                     <div id="text" class="w3-container lefttab w3-animate-opacity" style="display:none"/>
                 </div>
                 <div id="right">
                     <div class="w3-bar w3-black">
-                        <button class="w3-bar-item w3-button tablink" onclick="openisitab('glosses')" id="glossesb">Glosses (chapter)</button>
-                        <button class="w3-bar-item w3-button tablink" onclick="openisitab('manuscripts')" id="manuscriptsb">Glosses (manuscripts)</button>
-                        <button class="w3-bar-item w3-button tablink" onclick="openisitab('network')" id="networkb">Network</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openisitab('glosses',true)" id="glossesb">Glosses (chapter)</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openisitab('manuscripts',true)" id="manuscriptsb">Glosses (manuscripts)</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openisitab('network',true)" id="networkb">Network</button>
                     </div>
                     <div id="glosses" class="w3-container w3-border isitab w3-animate-opacity">
                     </div>
@@ -183,7 +187,7 @@
                     </div>
                     <div id="network" class="w3-container w3-border isitab" style="display:none">
                         <div>
-                            <p style="font-size:smaller">Explanations in the <span class="hyperlink" onclick="openlefttab('networks')">Networks</span> tab. Change settings 
+                            <p style="font-size:smaller">Explanations in the <span class="hyperlink" onclick="openlefttab('networks','',true)">Networks</span> tab. Change settings 
                                 <span class="hyperlink" onclick="document.getElementById('modal-04').style.display = 'block';">here</span>. Filter by weight below or 
                                 interact with the graph directly.</p>
                         </div>
@@ -349,8 +353,8 @@
                                 </tr>
                                 <tr>
                                     <td><button class="w3-button w3-black" onclick="savegraph('png')">Save png</button></td>
-                                    <td><button title="Compute graph using pre-set parameters" class="w3-button w3-black" onclick="creategraph(true)">Curated display</button></td>
-                                    <td><button title="Compute graph using parameters set above" class="w3-button w3-black" onclick="creategraph(false)">Compute graph</button></td>
+                                    <td><button title="Compute graph using pre-set parameters" class="w3-button w3-black" onclick="creategraph(globalThis.networktype,true,false)">Curated display</button></td>
+                                    <td><button title="Compute graph using parameters set above" class="w3-button w3-black" onclick="creategraph(globalThis.networktype,false,false)">Compute graph</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -382,6 +386,7 @@
             <xsl:call-template name="htmlcomment">
                 <xsl:with-param name="comment" select="$comment"></xsl:with-param>
             </xsl:call-template>
+            <a id="{concat('gloss',@n)}"/>
             <h3>
                 <xsl:text>Glosses to chapter </xsl:text>
                 <xsl:value-of select="@n"/>
@@ -535,7 +540,7 @@
                 <xsl:attribute name="onclick">
                     <xsl:text>openlefttab('</xsl:text>
                     <xsl:value-of select="@n"/>
-                    <xsl:text>')</xsl:text>
+                    <xsl:text>','',true)</xsl:text>
                 </xsl:attribute>
                 <xsl:text>chapter </xsl:text>
                 <xsl:value-of select="@n"/>
@@ -615,11 +620,15 @@
             <h2>Etymologiae, book I</h2>
             <p>
                 <xsl:if test="preceding-sibling::tei:div">
-                    <a href="#">
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:text>#left-</xsl:text>
+                            <xsl:value-of select="preceding-sibling::tei:div[1]/@n"/>
+                        </xsl:attribute>
                         <xsl:attribute name="onclick">
                             <xsl:text>openlefttab('</xsl:text>
                             <xsl:value-of select="preceding-sibling::tei:div[1]/@n"/>
-                            <xsl:text>')</xsl:text>
+                            <xsl:text>','',true)</xsl:text>
                         </xsl:attribute>
                         <xsl:attribute name="title">
                             <xsl:text>Previous chapter </xsl:text>
@@ -632,11 +641,15 @@
                     <xsl:text> - </xsl:text>
                 </xsl:if>
                 <xsl:if test="following-sibling::tei:div">
-                    <a href="#">
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:text>#left-</xsl:text>
+                            <xsl:value-of select="following-sibling::tei:div[1]/@n"/>
+                        </xsl:attribute>
                         <xsl:attribute name="onclick">
                             <xsl:text>openlefttab('</xsl:text>
                             <xsl:value-of select="following-sibling::tei:div[1]/@n"/>
-                            <xsl:text>')</xsl:text>
+                            <xsl:text>','',true)</xsl:text>
                         </xsl:attribute>
                         <xsl:attribute name="title">
                             <xsl:text>Next chapter </xsl:text>
@@ -733,9 +746,9 @@
                 <span class="suplink">
                     <a href="{concat('#',hi:nodeid(key('glossGrp',@xml:id)))}">
                         <xsl:attribute name="onclick">
-                            <xsl:text>gotolemma('</xsl:text>
+                            <xsl:text>globalThis.useraction = true; gotolemma('</xsl:text>
                             <xsl:value-of select="ancestor::tei:div[@type='chapter']/@n"/>
-                            <xsl:text>');</xsl:text>
+                            <xsl:text>',true);</xsl:text>
                         </xsl:attribute>g</a>
                 </span>
             </xsl:if>
@@ -796,7 +809,7 @@
         </li>
     </xsl:template>
     
-    <xsl:template match="tei:list[@rend='bulleted']" mode="#all">
+    <xsl:template match="tei:list" mode="#all">
         <ul>
             <xsl:apply-templates mode="#current"/>
         </ul>

@@ -16,6 +16,12 @@
     <xsl:key name="mstype" match="tei:msDesc" use="@type"/>
     <xsl:key name="msregion" match="tei:msDesc" use="hi:removehash(@ana)"/>
     
+    <xsl:variable name="preprocess">
+        <xsl:copy>
+            <xsl:apply-templates select="node()" mode="copy"/>
+        </xsl:copy>
+    </xsl:variable>
+
     <xsl:template match="/">
         <xsl:call-template name="msslist"/>
         <xsl:call-template name="mssgroups"/>

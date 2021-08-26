@@ -59,7 +59,7 @@ var contMenu = {
             var target = event.target || event.cyTarget;
             globalThis.useraction = true;
             window.location.hash = 'left-' + target.data('id');
-            openlefttab(target.data('id'))
+            openlefttab(target.data('id'),'',true)
         },
         hasTrailingDivider: true
     }, {
@@ -110,7 +110,7 @@ var contMenu = {
         coreAsWell: false,
         onClickFunction: function (event) {
             var target = event.target || event.cyTarget;
-            openlefttab('msdesc', 'msdesc-' + target.data('id'))
+            openlefttab('msdesc', 'msdesc-' + target.data('id'),true)
         },
         hasTrailingDivider: true
     }, {
@@ -121,7 +121,7 @@ var contMenu = {
         coreAsWell: false,
         onClickFunction: function (event) {
             var target = event.target || event.cyTarget;
-            openlefttab('msstats', 'msstats-' + target.data('id'))
+            openlefttab('msstats', 'msstats-' + target.data('id'),true)
         },
         hasTrailingDivider: true
     }
@@ -287,16 +287,16 @@ function redisplayNetwork() {
     }
 }
 
-function creategraph(curated){
-    switch(globalThis.networktype) {
+function creategraph(networktype, curated, sethash){
+    switch(networktype) {
         case 'ms_div':
-            func_ms_div(network_ms_div,cy,curated)
+            func_ms_div(network_ms_div,cy,curated,sethash);
             break;
         case 'ms_clus':
-            func_ms_clus(network_ms_clus,cy,curated)
+            func_ms_clus(network_ms_clus,cy,curated,sethash);
             break;
         default:
-            func_ms(network_ms,cy,curated)
+            func_ms(network_ms,cy,curated,sethash);
             break;
     }
 }
@@ -319,13 +319,17 @@ function nodesummedweight(ele) {
     return thisweight;
 }
 
-function func_ms_div(network, cy, curated) {
+function func_ms_div(network, cy, curated, sethash) {
     globalThis.networktype = 'ms_div';
     cy.remove(cy.elements())
     cy.add(network);
     if (curated) {
         usemss = JSON.parse(JSON.stringify(msslist));
         globalThis.curated = true;
+        if (sethash) {
+            globalThis.useraction = true;
+            window.location.hash = 'network-'+ globalThis.networktype;
+        }
     } else {
         usemss = JSON.parse(JSON.stringify(currmss));
         globalThis.curated = false;
@@ -412,7 +416,7 @@ function func_ms_div(network, cy, curated) {
     layout.run();
 };
 
-function func_ms_clus(network, cy, curated) {
+function func_ms_clus(network, cy, curated, sethash) {
     globalThis.networktype = 'ms_clus';
     cy.remove(cy.elements())
     cy.add(network);
@@ -420,6 +424,10 @@ function func_ms_clus(network, cy, curated) {
         usemss = JSON.parse(JSON.stringify(msslist));
         useclust = JSON.parse(JSON.stringify(clustlist));
         globalThis.curated = true;
+        if (sethash) {
+            globalThis.useraction = true;
+            window.location.hash = 'network-'+ globalThis.networktype;
+        }
     } else {
         usemss = JSON.parse(JSON.stringify(currmss));
         useclust = JSON.parse(JSON.stringify(currclust));
@@ -490,8 +498,8 @@ function func_ms_clus(network, cy, curated) {
     layout.run();
 }
 
-function func_ms(network, cy, curated) {
-     globalThis.networktype = 'ms_ms';
+function func_ms(network, cy, curated, sethash) {
+    globalThis.networktype = 'ms_ms';
     
     var w = cy.width();
     var h = cy.height();
@@ -503,6 +511,10 @@ function func_ms(network, cy, curated) {
         usemss = JSON.parse(JSON.stringify(msslist));
         useclust = JSON.parse(JSON.stringify(clustlist));
         globalThis.curated = true;
+        if (sethash) {
+            globalThis.useraction = true;
+            window.location.hash = 'network-'+ globalThis.networktype;
+        }
     } else {
         usemss = JSON.parse(JSON.stringify(currmss));
         useclust = JSON.parse(JSON.stringify(currclust));

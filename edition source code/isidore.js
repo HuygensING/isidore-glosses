@@ -2,29 +2,49 @@ var cy = cytoscape({
     container: document.getElementById('cyto')
 });
 
-window.onhashchange = function(){
+window.onhashchange = function(){ // handling back and forward buttons
 //    console.log('window.onhashchange ', window.location.hash,globalThis.useraction,window.location.hash.substring(6));
     if (globalThis.useraction) {
         globalThis.useraction = false;
     } else {
-        globalThis.backforward = true;
-        if (window.location.hash.startsWith('#left-')) {
-            openlefttab(window.location.hash.substring(6));
-        } else {
-            if (window.location.hash.startsWith('#msdesc-')) {
-                openlefttab('msdesc');
-            } else {
-                if (window.location.hash.startsWith('#msstats-')) {
-                    openlefttab('msstats');
-                } else{
-                    if (window.location.hash.startsWith('#glossms-')) {
-                        openmsgloss(window.location.hash.substring(9));
-                    }
+        switch (true) {
+            case (window.location.hash.startsWith('#left-')):
+                openlefttab(window.location.hash.substring(6),'',false)
+                break;
+            case (window.location.hash.startsWith('#right-')):
+                win = window.location.hash.substring(7);
+                if (document.getElementById(win).style.display == "none"){
+                    openisitab(win,false);
                 }
-            }
+                break;
+            case (window.location.hash.startsWith('#network-')):
+                if (document.getElementById('network').style.display == "none"){
+                    openisitab('network',false)
+                }
+                win = window.location.hash.substring(9);
+                if (globalThis.networktype != win) {
+                    setTimeout(function () {
+                        creategraph(win,true,false)},250);
+                    }
+                break;
+            case (window.location.hash.startsWith('#msdesc-')):
+                openlefttab('msdesc','',false);
+                break;
+            case (window.location.hash.startsWith('#msstats-')):
+                openlefttab('msstats','',false);
+                break;
+            case (window.location.hash.startsWith('#glossms-')):
+                openmsgloss(window.location.hash.substring(9), false)
+                break;
+            case (window.location.hash.startsWith('#gg_L')):
+                t1 = window.location.hash.substring(5);
+                t2 = t1.substring(0,t1.indexOf('.'));
+                chap = romanize(parseInt(t2));
+                gotolemma(chap);
+                break;
         }
     }
-};
+}
 
 window.onload = function () {
     currmss = JSON.parse(JSON.stringify(msslist));
@@ -42,7 +62,7 @@ window.onload = function () {
     globalThis.weight = 0;
     globalThis.tapped = '';
     globalThis.mousedown = false;
-    openisitab('network');
+    openisitab('network',true);
     document.getElementById("actman").innerHTML  = currmss.length.toString() + ' of ' + msslist.length.toString()
     document.getElementById("actclust").innerHTML  = currclust.length.toString() + ' of ' + clustlist.length.toString()
     setTimeout(function () {func_ms_div(network_ms_div,cy,true)}, 250 );
@@ -80,7 +100,7 @@ window.onload = function () {
     if (urlParams.has('ms')) {
         globalThis.useraction = true;
         window.location.hash = 'glossms-' + initms;
-        openisitab('manuscripts');
+        openisitab('manuscripts',true);
     }
 };
 
@@ -275,7 +295,7 @@ function glossonoff() {
 
 /*                                                               TAB HANDLING */
 
-function openisitab(isitabName) {
+function openisitab(isitabName,sethash) {
     var i, x, tablinks;
     x = document.getElementsByClassName("isitab");
     for (i = 0; i < x.length; i++) {
@@ -288,16 +308,20 @@ function openisitab(isitabName) {
     document.getElementById(isitabName).style.display = "block";
     //evt.currentTarget.className += " w3-red";
     document.getElementById(isitabName + 'b').className += " w3-red";
+    if (sethash) {
+        globalThis.useraction = true;
+        window.location.hash = 'right-'+ isitabName;
+    }
 }
 
-function openlefttab(lefttabName,hash) {
+function openlefttab(lefttabName, hash, sethash) {
     var i, x, tablinks;
 //    console.log(hash,hash!=null);
     x = tablinks = document.getElementsByClassName("lefttab");
     for (i = 0; i < x.length; i++) {
         tablinks[i].style.display = "none";;
     }
-    if (['home','intro','msdesc','msstats','networks','clusters','sources'].includes(lefttabName)) {
+    if (['home','intro','msdesc','msstats','networks','clusters','sources','biblio'].includes(lefttabName)) {
         document.getElementById(lefttabName).style.display = "block";
     } else {
         fetch('htmlfrag/text' + lefttabName + '.html').then(function (response) {
@@ -317,13 +341,11 @@ function openlefttab(lefttabName,hash) {
             console.warn('Something went wrong.', err);
         });
         document.getElementById('text').style.display = "block";
-        openisitab('glosses')
+        openisitab('glosses',false)
     }
-    if (globalThis.backforward) {
-        globalThis.backforward = false;
-    } else {
+    if (sethash) {
         globalThis.useraction = true;
-        if (hash==null) {
+        if (hash=='') {
             window.location.hash = 'left-'+ lefttabName;
         } else {
             window.location.hash = hash;
@@ -336,7 +358,7 @@ function openlefttab(lefttabName,hash) {
     document.getElementById('tab' + lefttabName).className += " w3-red";
 }
 
-function openmsgloss(msid) {
+function openmsgloss(msid,sethash) {
         fetch('htmlfrag/glossms' + msid + '.html').then(function (response) {
             return response.text();
         }).then(function (html) {
@@ -344,29 +366,29 @@ function openmsgloss(msid) {
         }). catch (function (err) {
             console.warn('Something went wrong in loading ms glosses ' + msid, err);
         });
-        openisitab('manuscripts')
+        openisitab('manuscripts',sethash)
 }
 
 function gotolemma(chap){
-    fetch('htmlfrag/gloss' + chap + '.html').then(function (response) {
-        return response.text();
-    }).then(function (html) {
-        document.getElementById("glosses").innerHTML = html;
-        glossonoff();
-    }). catch (function (err) {
-        console.warn('Something went wrong.', err);
-    });
-    openisitab('glosses')
+    if (document.getElementById('gloss'+chap) == null){
+        fetch('htmlfrag/gloss' + chap + '.html').then(function (response) {
+            return response.text();
+        }).then(function (html) {
+            document.getElementById("glosses").innerHTML = html;
+            glossonoff();
+        }). catch (function (err) {
+            console.warn('Something went wrong.', err);
+        });
+    }
+    if (document.getElementById('glosses').style.display != "block") {
+        openisitab('glosses',true)
+    }
 }
 
 function openmsglosshash(ms) {
     globalThis.useraction = true;
     window.location.hash = 'glossms-' + ms;
     openmsgloss(ms)
-}
-
-function dummy () {
-    return 0
 }
 
 
@@ -383,3 +405,22 @@ slider.oninput = function() {
   redisplayNetwork();
 }
 
+/*                                                                                   various                  */
+
+function dummy () {
+    return 0
+}
+
+function romanize (num) {
+    if (isNaN(num))
+        return NaN;
+    var digits = String(+num).split(""),
+        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+               "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        roman = "",
+        i = 3;
+    while (i--)
+        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
+}

@@ -23,6 +23,12 @@
         <xsl:call-template name="createcomment"/>
     </xsl:variable>
 
+    <xsl:variable name="preprocess">
+        <xsl:copy>
+            <xsl:apply-templates select="node()" mode="copy"/>
+        </xsl:copy>
+    </xsl:variable>
+
     <xsl:template match="/">
         <!--<xsl:call-template name="network_div_ab"/>
         <xsl:call-template name="network_ms_gl_sim_clus"/>-->

@@ -191,6 +191,9 @@ span.lemma {
 span.app span.quote span.lg{
   display:inline;
 }
+span.bold{
+  font-weight: bold;
+}
 span.quote span.lg{
   display:block;
   margin-top: -10px;

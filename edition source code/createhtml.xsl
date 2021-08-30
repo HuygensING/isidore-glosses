@@ -31,6 +31,12 @@
             <xsl:apply-templates select="node()" mode="copy"/>
         </xsl:copy>
     </xsl:variable>
+    
+    <xsl:variable name="mslist" as="xs:string *">
+        <xsl:for-each select="//tei:msDesc">
+            <xsl:sequence select="@xml:id"/>
+        </xsl:for-each>
+    </xsl:variable>
 
     <xsl:template match="/">
 <!--        <xsl:result-document href="preprocess.xml" omit-xml-declaration="no" method="xml">
@@ -122,7 +128,7 @@
                             <xsl:apply-templates select="//tei:publicationStmt/tei:date"/>
                             <br/>
                             <xsl:text>Licence: </xsl:text>
-                            <a href="{//tei:publicationStmt/tei:availability/tei:licence/@target}"><xsl:apply-templates select="//tei:publicationStmt/tei:availability/tei:licence/tei:p/node()"/></a>
+                            <a href="{substring-before(//tei:publicationStmt/tei:availability/tei:licence/@target,' ')}"><xsl:apply-templates select="//tei:publicationStmt/tei:availability/tei:licence/tei:p/node()"/></a>
                             <br/>
                             <xsl:text>GitHub: </xsl:text>
                             <a href="{//tei:publicationStmt/@source}"><xsl:value-of select="//tei:publicationStmt/@source"/></a>
@@ -774,6 +780,7 @@
                         <xsl:apply-templates select="tei:sic/node()" mode="#current"/>
                     </xsl:attribute>
                     <xsl:apply-templates select="tei:corr" mode="#current"/>
+                    <img class="stylus" src="pics/stylus.jpg" width="15px" heighth="15px"/>
                 </span>
             </xsl:otherwise>
         </xsl:choose>
@@ -801,6 +808,12 @@
         <h3>
             <xsl:apply-templates mode="#current"/>
         </h3>
+    </xsl:template>
+    
+    <xsl:template match="tei:hi[@rend='bold']" mode="#all">
+        <span class="bold">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     
     <xsl:template match="tei:item" mode="#all">
@@ -856,9 +869,23 @@
     </xsl:template>
     
     <xsl:template match="tei:ref" mode="#all">
-        <a href="{@target}" onclick="{@action}">
-            <xsl:apply-templates mode="#current"/>
-        </a>
+        <xsl:choose>
+            <xsl:when test="hi:removehash(@target)=$mslist">
+                <xsl:call-template name="mslink">
+                    <xsl:with-param name="ms" select="id(hi:removehash(@target))"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="@action">
+                <a href="{@target}">
+                    <xsl:apply-templates mode="#current"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <a href="{@target}" onclick="{@action}">
+                    <xsl:apply-templates mode="#current"/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="tei:row" mode="#all">

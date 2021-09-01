@@ -10,7 +10,7 @@
     
     <xsl:output method="html"/>
 
-    <xsl:key name="source" match="hi:source[ancestor::tei:gloss]" use="@target"/>
+    <xsl:key name="source" match="hi:source[ancestor::tei:gloss[not(starts-with(@xml:id,'L0'))]]" use="@target"/>
     <xsl:key name="glossGrp" match="hi:glossGrp" use="hi:removehash(@target)"/>
     <xsl:key name="interp" match="tei:interp[parent::tei:interpGrp[@type='clusters']]" use="@xml:id"/>
     <xsl:key name="language" match="tei:interp[parent::tei:interpGrp[@xml:id='lang']]" use="@xml:id"/>
@@ -368,11 +368,11 @@
                 </div>
             </body>
         </html>
-        <xsl:for-each select="//tei:div[@type='chapter']">
+        <xsl:for-each select="$preprocess//tei:div[@type='chapter']">
             <xsl:apply-templates select="." mode="text"/>
             <xsl:apply-templates select="." mode="gloss"/>
         </xsl:for-each>
-        <xsl:apply-templates select="//tei:msDesc" mode="msgloss"/>
+        <xsl:apply-templates select="$preprocess//tei:msDesc" mode="msgloss"/>
     </xsl:template>
     
     <xsl:template match="@*|node()" mode="copy" priority="2">
@@ -410,7 +410,7 @@
                 <input type="checkbox" id="unclustonoffc" name="unclustonoffc" value="unclustonoffc" onclick="funclustonoff('c')"/>
                 <label for="unclustonoff"> Turn off display of isolated glosses?</label>
             </p>
-                <xsl:apply-templates select=".//tei:seg" mode="gloss">
+                <xsl:apply-templates select=".//tei:seg[@type='lemma']" mode="gloss">
                     <xsl:with-param name="mode" select="'chapmode'" tunnel="yes"/>
                 </xsl:apply-templates>
         </xsl:result-document>
@@ -448,7 +448,19 @@
                                         <xsl:text>Language: </xsl:text>
                                         <xsl:apply-templates select="key('language',@xml:lang)"/>
                                     </xsl:attribute>
-                                    <img class="stylus" src="pics/language.svg" width="15px" heighth="15px"/></span>
+                                    <img class="stylus" src="pics/language.svg" width="15px" heighth="15px"/>
+                                </span>
+                            </xsl:if>
+                            <xsl:if test="hi:source">
+                                <xsl:for-each select="hi:source">
+                                    <span>
+                                        <xsl:attribute name="title">
+                                            <xsl:text>Source: </xsl:text>
+                                            <xsl:apply-templates select="key('bibl',hi:removehash(@target))/node()"/>
+                                        </xsl:attribute>
+                                        <img class="stylus" src="pics/open-book.svg" width="15px" heighth="15px"/>
+                                    </span>
+                                </xsl:for-each>
                             </xsl:if>
                         </td>
                         <td class="glossnote">
@@ -552,7 +564,7 @@
                 <xsl:value-of select="@n"/>
             </span>
         </h4>
-        <xsl:apply-templates select=".//tei:seg" mode="gloss">
+        <xsl:apply-templates select=".//tei:seg[@type='lemma']" mode="gloss">
             <xsl:with-param name="mode" select="'msmode'" tunnel="yes"/>
         </xsl:apply-templates>
     </xsl:template>
@@ -583,7 +595,12 @@
                 <xsl:apply-templates mode="source"/>
                 <xsl:text> (occurs: </xsl:text>
                 <xsl:for-each select="key('source',hi:addhash(@xml:id))">
-                    <xsl:value-of select="hi:removehash(ancestor::hi:glossGrp/@target)"/>
+                    <a href="{hi:addhash(hi:nodeid(ancestor::hi:glossGrp))}">
+                        <xsl:attribute name="onclick">
+                            <xsl:text>openhash();</xsl:text>
+                        </xsl:attribute>
+                        <xsl:value-of select="hi:removehash(ancestor::hi:glossGrp/@target)"/>
+                    </a>
                     <xsl:if test="not(position() = last())">
                         <xsl:text>, </xsl:text>
                     </xsl:if>
@@ -752,7 +769,7 @@
                 <span class="suplink">
                     <a href="{concat('#',hi:nodeid(key('glossGrp',@xml:id)))}">
                         <xsl:attribute name="onclick">
-                            <xsl:text>globalThis.useraction = true; gotolemma('</xsl:text>
+                            <xsl:text>globalThis.useraction = true; gotochapgloss('</xsl:text>
                             <xsl:value-of select="ancestor::tei:div[@type='chapter']/@n"/>
                             <xsl:text>',true);</xsl:text>
                         </xsl:attribute>g</a>

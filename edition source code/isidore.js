@@ -7,44 +7,50 @@ window.onhashchange = function(){ // handling back and forward buttons
     if (globalThis.useraction) {
         globalThis.useraction = false;
     } else {
-        switch (true) {
-            case (window.location.hash.startsWith('#left-')):
-                openlefttab(window.location.hash.substring(6),'',false)
-                break;
-            case (window.location.hash.startsWith('#right-')):
-                win = window.location.hash.substring(7);
-                if (document.getElementById(win).style.display == "none"){
-                    openisitab(win,false);
-                }
-                break;
-            case (window.location.hash.startsWith('#network-')):
-                if (document.getElementById('network').style.display == "none"){
-                    openisitab('network',false)
-                }
-                win = window.location.hash.substring(9);
-                if (globalThis.networktype != win) {
-                    setTimeout(function () {
-                        creategraph(win,true,false)},250);
-                    }
-                break;
-            case (window.location.hash.startsWith('#msdesc-')):
-                openlefttab('msdesc','',false);
-                break;
-            case (window.location.hash.startsWith('#msstats-')):
-                openlefttab('msstats','',false);
-                break;
-            case (window.location.hash.startsWith('#glossms-')):
-                openmsgloss(window.location.hash.substring(9), false)
-                break;
-            case (window.location.hash.startsWith('#gg_L')):
-                t1 = window.location.hash.substring(5);
-                t2 = t1.substring(0,t1.indexOf('.'));
-                chap = romanize(parseInt(t2));
-                gotolemma(chap);
-                break;
-        }
+        openhash();
     }
 }
+
+function openhash() {
+    switch (true) {
+        case (window.location.hash.startsWith('#left-')):
+            openlefttab(window.location.hash.substring(6),'',false)
+            break;
+        case (window.location.hash.startsWith('#right-')):
+            win = window.location.hash.substring(7);
+            if (document.getElementById(win).style.display == "none"){
+                openisitab(win,false);
+            }
+            break;
+        case (window.location.hash.startsWith('#network-')):
+            if (document.getElementById('network').style.display == "none"){
+                openisitab('network',false)
+            }
+            win = window.location.hash.substring(9);
+            if (globalThis.networktype != win) {
+                setTimeout(function () {
+                    creategraph(win,true,false)},250);
+                }
+            break;
+        case (window.location.hash.startsWith('#msdesc-')):
+            openlefttab('msdesc','',false);
+            break;
+        case (window.location.hash.startsWith('#msstats-')):
+            openlefttab('msstats','',false);
+            break;
+        case (window.location.hash.startsWith('#glossms-')):
+            openmsgloss(window.location.hash.substring(9), false)
+            break;
+        case (window.location.hash.startsWith('#gg_L')):
+            t1 = window.location.hash.substring(5);
+            t2 = t1.substring(0,t1.indexOf('.'));
+            chap = romanize(parseInt(t2));
+            openchapgloss(chap);
+            break;
+    }
+}
+
+
 
 window.onload = function () {
     currmss = JSON.parse(JSON.stringify(msslist));
@@ -369,7 +375,7 @@ function openmsgloss(msid,sethash) {
         openisitab('manuscripts',sethash)
 }
 
-function gotolemma(chap){
+function openchapgloss(chap){
     if (document.getElementById('gloss'+chap) == null){
         fetch('htmlfrag/gloss' + chap + '.html').then(function (response) {
             return response.text();
